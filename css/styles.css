@@ -4,6 +4,7 @@
   margin-top: 54px;
   font-family: "Roboto", sans-serif;
   background-color: #fafafa;
+  color: #262626;
 }
 a {
   text-decoration: none;
@@ -11,15 +12,15 @@ a {
 
 ion-icon {
   font-size: 20px;
-  color: #000000;
+  color: #262626;
 }
 
 .negrito {
   font-weight: 500;
 }
 
-div {
-  color: #262626;
+.light {
+  font-weight: 300;
 }
 
 /* estilos do topo */
@@ -28,7 +29,7 @@ div {
   width: 100vw;
   position: fixed;
   top: 0;
-  background-color: white;
+  background-color: #ffffff;
   border-bottom: 1px solid #e6e6e6;
   z-index: 100;
 }
@@ -51,7 +52,6 @@ div {
   align-items: center;
   justify-content: center;
   color: #979797;
-  margin: 0 auto;
 }
 
 .logo-principal > a {
@@ -60,10 +60,10 @@ div {
 }
 
 .divisor-logo {
-  margin: 10px;
   height: 22px;
   border-right: 1px solid #dbdbdb;
   padding-right: 10px;
+  margin-right: 10px;
 }
 
 .icones > a {
@@ -75,23 +75,22 @@ div {
 /* inicio conteudo site */
 .conteudo {
   display: flex;
-  height: 1200px;
   width: 935px;
   margin: 0 auto;
   padding-top: 38px;
-  justify-content: space-between;
 }
 
 .caixa-stories {
   display: flex;
   flex-direction: column;
 }
+
 .stories {
   height: 118px;
   width: 614px;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
   margin-bottom: 24px;
   padding-left: 23px;
   border: 1px solid #dbdbdb;
@@ -104,18 +103,15 @@ div {
 .stories > ion-icon {
   position: absolute;
   font-size: 26px;
-  color: white;
+  color: #ffffff;
   z-index: 10;
   right: 5px;
 }
 
 .perfil-stories {
   display: flex;
-  flex-direction: column;
   height: 100%;
-  width: 120px;
   align-items: center;
-  justify-content: center;
   font-size: 12px;
   margin-right: 13px;
 }
@@ -150,7 +146,6 @@ div {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 1px solid #dbdbdb;
   box-shadow: 0px 0px 2px #e6e6e6;
   margin-bottom: 60px;
@@ -164,21 +159,17 @@ div {
 }
 
 .topo-post > div {
-  display: flex;
-  align-items: center;
   padding: 17px;
 }
 
 .topo-post .perfil img {
   height: 32px;
   width: 32px;
-  border-radius: 50%;
 }
 
 .fundo-post {
   display: flex;
   flex-direction: column;
-  height: 79px;
   padding: 13px;
 }
 
@@ -202,26 +193,12 @@ div {
   margin: 5px;
 }
 
-/* estilo sidebar */
-
-.sidebar {
-  width: 300px;
-  position: fixed;
-  left: 62.3vw;
-}
+/* estilos perfil */
 
 .perfil {
   display: flex;
   align-items: center;
 }
-
-.sidebar .perfil {
-  padding: 20px 0px;
-}
-.perfil p {
-  margin-left: 8px;
-}
-
 .nome-perfil {
   font-size: 14px;
 }
@@ -231,8 +208,22 @@ div {
 
 .nome-perfil :nth-child(2) {
   color: #bebebe;
-  font-weight: 300;
   margin-top: 8px;
+}
+
+/* estilo sidebar */
+
+.sidebar {
+  width: 300px;
+  position: fixed;
+  left: 62.3vw;
+}
+
+.sidebar > .perfil {
+  padding: 20px 0px;
+}
+.perfil p {
+  margin-left: 8px;
 }
 
 .sugestoes-topo {
@@ -254,10 +245,6 @@ div {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-}
-
-.perfil-sugerido > .perfil {
-  padding: 0px;
 }
 
 .perfil-sugerido img {
