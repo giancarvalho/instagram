@@ -121,6 +121,13 @@ ion-icon {
   text-align: center;
 }
 
+.stories-background p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 65px;
+}
+
 .stories-background img {
   height: 66px;
   width: 66px;
@@ -142,7 +149,6 @@ ion-icon {
 
 .post {
   width: 614px;
-  height: 749px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -160,11 +166,6 @@ ion-icon {
 
 .topo-post > div {
   padding: 17px;
-}
-
-.topo-post .perfil img {
-  height: 32px;
-  width: 32px;
 }
 
 .fundo-post {
@@ -191,6 +192,7 @@ ion-icon {
   width: 20px;
   height: 20px;
   margin: 5px;
+  border-radius: 50%;
 }
 
 /* estilos perfil */
@@ -211,6 +213,12 @@ ion-icon {
   margin-top: 8px;
 }
 
+.perfil img {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
 /* estilo sidebar */
 
 .sidebar {
@@ -221,6 +229,11 @@ ion-icon {
 
 .sidebar > .perfil {
   padding: 20px 0px;
+}
+
+.sidebar > .perfil img {
+  height: 56px;
+  width: 56px;
 }
 .perfil p {
   margin-left: 8px;
@@ -245,11 +258,6 @@ ion-icon {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-}
-
-.perfil-sugerido img {
-  height: 32px;
-  width: 32px;
 }
 
 .perfil-sugerido button {
