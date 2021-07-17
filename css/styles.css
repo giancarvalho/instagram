@@ -1,5 +1,8 @@
 /* estilos globais pagina inicial */
 
+* {
+  box-sizing: border-box;
+}
 .website {
   margin-top: 54px;
   font-family: "Roboto", sans-serif;
@@ -11,7 +14,7 @@ a {
 }
 
 ion-icon {
-  font-size: 20px;
+  font-size: 25px;
   color: #262626;
 }
 
@@ -95,7 +98,6 @@ ion-icon {
   padding-left: 23px;
   border: 1px solid #dbdbdb;
   box-shadow: 0px 0px 2px #e6e6e6;
-  box-sizing: border-box;
   overflow: hidden;
   position: relative;
 }
@@ -147,6 +149,32 @@ ion-icon {
   background-size: cover;
 }
 
+/* estilos perfil */
+
+.perfil {
+  display: flex;
+  align-items: center;
+}
+.nome-perfil {
+  font-size: 14px;
+}
+.nome-perfil :first-child {
+  font-weight: 500;
+}
+
+.nome-perfil :nth-child(2) {
+  color: #bebebe;
+  margin-top: 8px;
+}
+
+.perfil img {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+/* estilos post */
+
 .post {
   width: 614px;
   background-color: white;
@@ -174,13 +202,16 @@ ion-icon {
   padding: 13px;
 }
 
-.botoes-post {
-  display: flex;
-  justify-content: space-between;
+.fundo-post ion-icon {
+  margin: 0px 6px;
 }
 
-.botoes-post ion-icon {
-  margin: 0px 6px;
+.botoes-post,
+.comentario,
+.inserir-comentario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .curtidas {
@@ -195,28 +226,43 @@ ion-icon {
   border-radius: 50%;
 }
 
-/* estilos perfil */
-
-.perfil {
-  display: flex;
-  align-items: center;
+.comentarios {
+  margin-top: 10px;
 }
-.nome-perfil {
+.comentarios p {
+  margin: 5px;
+}
+
+.comentario ion-icon {
+  font-size: 20px;
+}
+
+.inserir-comentario {
+  padding: 13px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.inserir-comentario input {
+  width: 100%;
+  border: none;
+  padding: 0px 10px;
   font-size: 14px;
 }
-.nome-perfil :first-child {
-  font-weight: 500;
+
+.inserir-comentario input:focus {
+  outline: none;
 }
 
-.nome-perfil :nth-child(2) {
-  color: #bebebe;
-  margin-top: 8px;
+.inserir-comentario button {
+  border: none;
+  background-color: transparent;
+  color: #b2dffc;
+  transition: color 300ms;
+  cursor: pointer;
 }
 
-.perfil img {
-  border-radius: 50%;
-  height: 32px;
-  width: 32px;
+.inserir-comentario button:hover {
+  color: #0095f6;
 }
 
 /* estilo sidebar */
@@ -224,7 +270,7 @@ ion-icon {
 .sidebar {
   width: 300px;
   position: fixed;
-  left: 62.3vw;
+  left: 61.5vw;
 }
 
 .sidebar > .perfil {
