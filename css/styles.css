@@ -83,7 +83,7 @@ ion-icon {
   padding-top: 38px;
 }
 
-.caixa-stories {
+.feed {
   display: flex;
   flex-direction: column;
 }
@@ -98,7 +98,7 @@ ion-icon {
   padding-left: 23px;
   border: 1px solid #dbdbdb;
   box-shadow: 0px 0px 2px #e6e6e6;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -134,6 +134,7 @@ ion-icon {
   height: 66px;
   width: 66px;
   margin-bottom: 3px;
+  border-radius: 50%;
 }
 
 .foto-stories {
@@ -217,6 +218,7 @@ ion-icon {
 .curtidas {
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .curtidas > img {
@@ -320,6 +322,11 @@ ion-icon {
   font-size: 12px;
 }
 
+.barra-mobile {
+  display: none;
+}
+
+/* adaptação desktop 935px de largura */
 @media (max-width: 935px) {
   .nav {
     width: 100%;
@@ -332,5 +339,89 @@ ion-icon {
   }
   .sidebar {
     display: none;
+  }
+}
+
+/* adaptação para mobile */
+@media (max-width: 614px) {
+  .logo-principal img {
+    align-self: center;
+  }
+
+  .divisor-logo {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .pesquisar {
+    display: none;
+  }
+
+  .nav .icones a:first-child {
+    margin: 0px;
+  }
+
+  .nav .icones a:nth-child(2),
+  .nav .icones a:nth-child(3),
+  .nav .icones a:nth-child(4) {
+    display: none;
+  }
+
+  .conteudo {
+    width: 100vw;
+    padding-top: 0;
+    padding-bottom: 8vh;
+  }
+
+  .feed {
+    width: 100%;
+  }
+
+  .stories {
+    height: 118px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0px;
+  }
+
+  .stories > ion-icon {
+    display: none;
+  }
+
+  .post {
+    width: 100%;
+  }
+
+  .barra-mobile {
+    display: initial;
+  }
+
+  .barra-mobile .icones {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .logo-principal {
+    width: 100%;
+  }
+
+  .logo-principal > a {
+    width: 100%;
+  }
+
+  .logo-principal img {
+    margin: 0 auto;
   }
 }
