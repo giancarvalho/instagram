@@ -270,7 +270,7 @@ ion-icon {
 .sidebar {
   width: 300px;
   position: fixed;
-  left: 61.5vw;
+  left: 68vw;
 }
 
 .sidebar > .perfil {
@@ -318,4 +318,19 @@ ion-icon {
   color: #c7c7c7;
   margin-bottom: 20px;
   font-size: 12px;
+}
+
+@media (max-width: 935px) {
+  .nav {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .conteudo {
+    justify-content: center;
+    width: 100vw;
+  }
+  .sidebar {
+    display: none;
+  }
 }
