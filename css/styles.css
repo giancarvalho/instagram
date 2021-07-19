@@ -27,6 +27,7 @@ ion-icon {
   font-weight: 300;
 }
 
+/* estilo direções: x = eixo x, y = eixo y */
 .f {
   display: flex;
 }
@@ -84,9 +85,7 @@ ion-icon {
   margin: 10px;
 }
 
-/* fim topo */
-
-/* inicio conteudo site */
+/* inicio conteudo pagina */
 .conteudo {
   max-width: 935px;
   margin: 0 auto;
