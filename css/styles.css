@@ -16,6 +16,7 @@ a {
 ion-icon {
   font-size: 25px;
   color: #262626;
+  pointer-events: none;
 }
 
 .negrito {
@@ -24,6 +25,27 @@ ion-icon {
 
 .light {
   font-weight: 300;
+}
+
+.f {
+  display: flex;
+}
+
+.coluna {
+  flex-direction: column;
+}
+
+.xy-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.y-center {
+  align-items: center;
+}
+
+.x-between {
+  justify-content: space-between;
 }
 
 /* estilos do topo */
@@ -39,27 +61,7 @@ ion-icon {
 .nav {
   width: 935px;
   height: 54px;
-  display: flex;
   margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.pesquisar {
-  width: 215px;
-  height: 28px;
-  display: flex;
-  background-color: #ffffff;
-  border: 1px solid #dbdbdb;
-  border-radius: 3px;
-  align-items: center;
-  justify-content: center;
-  color: #979797;
-}
-
-.logo-principal > a {
-  display: flex;
-  align-items: center;
 }
 
 .divisor-logo {
@@ -67,6 +69,15 @@ ion-icon {
   border-right: 1px solid #dbdbdb;
   padding-right: 10px;
   margin-right: 10px;
+}
+
+.pesquisar {
+  width: 215px;
+  height: 28px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  color: #979797;
 }
 
 .icones > a {
@@ -77,22 +88,14 @@ ion-icon {
 
 /* inicio conteudo site */
 .conteudo {
-  display: flex;
-  width: 935px;
+  max-width: 935px;
   margin: 0 auto;
   padding-top: 38px;
-}
-
-.feed {
-  display: flex;
-  flex-direction: column;
 }
 
 .stories {
   height: 118px;
   width: 614px;
-  display: flex;
-  align-items: center;
   background-color: #ffffff;
   margin-bottom: 24px;
   padding-left: 23px;
@@ -111,9 +114,7 @@ ion-icon {
 }
 
 .perfil-stories {
-  display: flex;
   height: 100%;
-  align-items: center;
   font-size: 12px;
   margin-right: 13px;
 }
@@ -152,10 +153,6 @@ ion-icon {
 
 /* estilos perfil */
 
-.perfil {
-  display: flex;
-  align-items: center;
-}
 .nome-perfil {
   font-size: 14px;
 }
@@ -179,16 +176,12 @@ ion-icon {
 .post {
   width: 614px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #dbdbdb;
   box-shadow: 0px 0px 2px #e6e6e6;
   margin-bottom: 60px;
 }
 
 .topo-post {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 60px;
 }
@@ -198,8 +191,6 @@ ion-icon {
 }
 
 .fundo-post {
-  display: flex;
-  flex-direction: column;
   padding: 13px;
 }
 
@@ -207,17 +198,7 @@ ion-icon {
   margin: 0px 6px;
 }
 
-.botoes-post,
-.comentario,
-.inserir-comentario {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .curtidas {
-  display: flex;
-  align-items: center;
   margin-top: 10px;
 }
 
@@ -268,11 +249,14 @@ ion-icon {
 }
 
 /* estilo sidebar */
+.container-sidebar {
+  display: unset;
+}
 
 .sidebar {
   width: 300px;
-  position: fixed;
-  left: 68vw;
+  top: 92px;
+  position: sticky;
 }
 
 .sidebar > .perfil {
@@ -288,8 +272,6 @@ ion-icon {
 }
 
 .sugestoes-topo {
-  display: flex;
-  justify-content: space-between;
   font-size: 12px;
 }
 
@@ -302,9 +284,6 @@ ion-icon {
 }
 
 .perfil-sugerido {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 16px;
 }
 
@@ -337,7 +316,7 @@ ion-icon {
     justify-content: center;
     width: 100vw;
   }
-  .sidebar {
+  .container-sidebar {
     display: none;
   }
 }
@@ -400,13 +379,10 @@ ion-icon {
   }
 
   .barra-mobile .icones {
-    display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 100;
-    justify-content: space-between;
-    align-items: center;
     height: 8vh;
     width: 100%;
     background-color: #ffffff;
