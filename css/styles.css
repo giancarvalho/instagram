@@ -363,6 +363,11 @@ ion-icon {
     border: none;
     box-shadow: none;
     margin-bottom: 0px;
+    overflow-x: scroll;
+  }
+
+  .stories::-webkit-scrollbar {
+    display: none;
   }
 
   .stories > ion-icon {
